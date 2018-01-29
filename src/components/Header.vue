@@ -7,11 +7,6 @@
             <div class="nav">
                 <ul>
                     <li :class="{active:active == index}" v-for='(nav,index) in navLink' @click='linkPath(nav,index)'><router-link :to="nav.path">{{nav.name}}</router-link></li>
-                    <!-- <li><router-link to="/basics">基础语法</router-link></li>
-                    <li><router-link to="/a">组件</router-link></li>
-                    <li><router-link to="/b">路由</router-link></li>
-                    <li><router-link to="/c">动画</router-link></li>
-                    <li><router-link to="/d">vuex状态管理</router-link></li> -->
                 </ul>
             </div>
         </header>
@@ -45,15 +40,22 @@
                     {
                         path:'/transition',
                         name:"动画"
+                    },
+                    {
+                        path:'/vuex',
+                        name:"vuex"
                     }
                 ],
-                active:0
             }
         },
         methods:{
             linkPath(nav,index){
-                this.active = index;
-                console.log(index);
+                this.$store.commit('headerClick',index)
+            }
+        },
+        computed: {
+            active(){
+                return this.$store.state.index;
             }
         }
     }

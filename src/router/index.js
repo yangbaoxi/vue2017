@@ -6,7 +6,7 @@ import assembly from '@/views/assembly'
 import hook from '@/views/hook'
 import routes from '@/views/routes'
 import transition from '@/views/transition'
-
+import vuex from '@/views/vuex'
 // 基础语法
 import interpolation from '@/components/knowledge/interpolation'
 import instructions from '@/components/knowledge/instructions'
@@ -20,6 +20,8 @@ import model from '@/components/knowledge/model'
 // 路由
 import detailsPage from '@/components/demoCom/detailsPage'
 import acceptData from '@/components/demoCom/acceptData'
+// vuex
+import vuexDemo from '@/components/demoCom/vuexDemo'
 Vue.use(Router)
 
 export default new Router({
@@ -95,6 +97,14 @@ export default new Router({
 		{
 			path:'/transition',
 			component:transition
+		},
+		{
+			path:'/vuex',
+			component:vuex
+		},
+		{
+			path:"/vuexDemo",
+			component:vuexDemo
 		}
 	]
 })
