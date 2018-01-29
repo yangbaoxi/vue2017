@@ -7,6 +7,7 @@ import hook from '@/views/hook'
 import routes from '@/views/routes'
 import transition from '@/views/transition'
 import vuex from '@/views/vuex'
+import four from '@/views/four'
 // 基础语法
 import interpolation from '@/components/knowledge/interpolation'
 import instructions from '@/components/knowledge/instructions'
@@ -105,6 +106,10 @@ export default new Router({
 		{
 			path:"/vuexDemo",
 			component:vuexDemo
+		},
+		{
+			path:"*",
+			component:four
 		}
 	]
 })
