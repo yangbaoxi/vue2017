@@ -209,7 +209,7 @@
 </script>
 <style scoped>
     .main{
-        width: 1200px;
+        max-width: 1200px;
         margin: 70px auto 0;
         padding: 20px 0;
     }
@@ -250,7 +250,7 @@
     .demo a{
         padding: 8px 35px;
         display: inline-block;
-        background: purple;
+        background: #8dc8da;
         color: #fff;
         margin-top: 10px;
     }
@@ -258,31 +258,39 @@
         font-size: 14px;
         color: #ffffff;
         line-height: 30px;
+        padding: 20px
     }
-    .jsCode {
-        padding: 20px;        
+    .jsCode {      
         width: 100%;        
-        background:#2b333b;
+        background:#f8f8f8;
         margin-bottom: 10px;        
     }
-    .vxCode{
-        padding: 20px;        
+    .jsCode pre{
+        color: #525252;
+
+    }
+    .vxCode{       
         width: 100%;        
-        background:rgb(230, 11, 84);
+        background:#f8f8f8;
         margin-bottom: 10px; 
     }
-    .htmlCode{
-        padding: 20px;        
+    .vxCode pre{
+        color:#2973b7 
+    }
+    .htmlCode{       
         width: 100%;        
-        background:rgb(0, 170, 142);
+        background:#f8f8f8;
         margin-bottom: 10px; 
+    }
+    .htmlCode pre{
+        color: #42b983;
     }
     .text{
         margin-bottom: 20px; 
     }
     .text p{
         font-size: 16px;
-        color: #0000ff;
+        color: #000;
         line-height: 25px;
     }
     .demo p{
@@ -293,5 +301,44 @@
     }
     .red{
         color: red;
+    }
+    @media (max-width:768px){
+        .main{
+            padding: 20px 15px;
+        }
+        .main h1{
+            font-size: 18px;
+        }
+        .main p{
+            font-size: 14px;
+        }
+        .contentBox{
+            padding: 0 15px;
+        }
+        .demo{
+            padding: 0;
+            border: none;
+        }
+        .jsCode pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .vxCode pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .htmlCode pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .contentBox li h4{
+            font-size: 14px;
+        }
+        .demo p{
+            font-size: 13px;
+        }
+        .text p{
+            font-size: 13px;
+        }
     }
 </style>

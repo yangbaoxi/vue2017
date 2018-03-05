@@ -238,7 +238,7 @@
 </script>
 <style scoped>
     .main{
-        width: 1200px;
+        max-width: 1200px;
         margin: 70px auto 0;
         padding: 20px 0;
     }
@@ -255,7 +255,7 @@
         color: red;
     }
     .AllBox {
-        width: 1200px;
+        max-width: 1200px;
         height: 1000px;
         margin:  20px auto 0;
     }
@@ -290,11 +290,11 @@
     .AllBox ul li .box .box_left{
         width: 50%;
         float: left;
-        background: #2b333b;
+        background: #f8f8f8;
     }
     .AllBox ul li .box .box_left pre{
         font-size: 14px;
-        color: #fff;
+        color: #525252;
         line-height: 25px;
         padding: 15px;
     }
@@ -308,26 +308,31 @@
     .AllBox ul li .box .box_right{
         width: 49%;
         float: right;
-        background: purple;
+        background: #f8f8f8;
     }
-    .AllBox ul li .box .other{
-        background: rgb(8, 138, 95);
-        margin-top: 10px;
-    }
+    
     .AllBox ul li .box .box_right pre{
-        color: #fff;
+        color: #2973b7;
         font-size: 14px;
         line-height: 25px;
         padding: 15px;
     }
+    .AllBox ul li .box .other{
+        background: #f8f8f8;
+        margin-top: 10px;
+        
+    }
+    .AllBox ul li .box .other pre{
+        color: #42b983;
+    }
     .explain{
-        width: 100%;
+        max-width: 100%;
         margin-top: 20px;
         padding: 20px;
     }
     .explain p{
         font-size: 14px;
-        color: #0000ff;
+        color: #000;
         line-height: 25px;
     }
     .explain .red{
@@ -335,14 +340,14 @@
     }
     .demonstration input{
         padding: 5px;
-        width: 300px;
+        max-width: 300px;
         display: block;
         margin-top: 10px;
     }
     .demonstration a{
         padding: 8px 35px;
         display: inline-block;
-        background:purple;
+        background:#8dc8da;
         color: #fff;
         margin-top: 10px;
     }
@@ -371,5 +376,51 @@
         font-size: 13px;
         color: #666;
         margin-top: 10px;
+    }
+
+
+    @media (max-width:768px){
+        .main{
+            padding: 20px 15px;
+        }
+        .main h1{
+            font-size: 18px;
+        }
+        .main p{
+            font-size: 14px;
+        }
+        .AllBox ul li .box .box_left{
+            float: none;
+            width: 100%;
+        }
+        .AllBox ul li h4{
+            font-size: 14px;
+        }
+        .AllBox ul li .box .box_left pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .AllBox ul li .box .box_right{
+            float: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .AllBox ul li .box .box_right pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+
+        .demonstration{
+            border-color: #b6b6ec;
+        }
+
+        .explain p{
+            font-size: 13px;
+            color: #000;
+        }
+
+        .AllBox ul li .introduce{
+            font-size: 13px;
+        }
     }
 </style>

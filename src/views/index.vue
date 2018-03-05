@@ -31,7 +31,7 @@
                         "grammar":["$ cnpm install webpack -g"]
                     },
                     {
-                        "title":"三：安装live-server服务器",
+                        "title":"三：安装live-server服务器(可以省略)",
                         "grammar":["$ cnpm install live-server -g","$ live-server"]
                     },
                     {
@@ -48,7 +48,7 @@
 </script>
 <style scoped>
     .introduce{
-        width: 1000px;
+        max-width: 1000px;
         margin:  70px auto 0;
     }
     .introduce .main{
@@ -56,7 +56,7 @@
     }
     .introduce .main h1{
         font-size: 20px;
-        color:#333;
+        color:#2c3e50;
         font-weight: 600;
     }
     .introduce .main ul{
@@ -67,19 +67,33 @@
     }
     .introduce .main li h2{
         font-size: 15px;
-        color: rgb(42, 116, 226);
+        color: #42b983;
         font-weight: bold;
     }
     .introduce .main li .shell{
-        width: 600px;
+        max-width: 600px;
         padding: 20px;
-        background: #2b333b;
+        background: #f8f8f8;
         margin-top: 15px;
     }
     .introduce .main li .shell span{
-        color: #fff;
+        color: #2973b7;
         display: block;
         padding: 5px 0;
         font-size: 14px;
+    }
+    @media (max-width:768px) {
+        .introduce .main{
+            padding:20px;
+        }
+        .introduce .main h1{
+            font-size: 16px;
+        }
+        .introduce .main li h2{
+            font-size: 14px;
+        }
+        .introduce .main li .shell span{
+            font-size: 12px;
+        }
     }
 </style>

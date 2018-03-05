@@ -451,7 +451,7 @@
 </script>
 <style scoped>
     .main{
-        width: 1200px;
+        max-width: 1200px;
         margin: 70px auto 0;
         padding: 20px 0;
     }
@@ -461,7 +461,7 @@
         font-weight: 600;
     }
     .animation{
-        width: 1200px;
+        max-width: 1200px;
         margin:  30px auto;
     }
     .animation h4{
@@ -502,7 +502,7 @@
     .animation .effect a{
         padding: 8px 35px;
         display: inline-block;
-        background:purple;
+        background:#8dc8da;
         color: #fff;
         margin-top: 10px;
     }
@@ -529,18 +529,18 @@
     }
     .animation .jscode{
         width: 30%;
-        background: #2b333b;
+        background: #f8f8f8;
         float: left;
         margin-right: 2%;
     }
     .animation .csscode{
         width: 43%;
-        background: #22af2e;
+        background: #f8f8f8;
         float: left;        
     }
     .animation .text p{
         font-size: 16px;
-        color: #0000ff;
+        color: #000;
         line-height: 25px;
     }
     .animation .text .red{
@@ -552,6 +552,12 @@
         line-height: 25px;
         padding: 15px;
         word-break: break-all;
+    }
+    .animation .jscode pre{
+        color: #525252;
+    }
+    .animation .csscode pre{
+        color: #2973b7;
     }
     /* 第一个特效 */
     .fade-enter-active{ /*整个进入动画 整个过程*/
@@ -648,5 +654,49 @@
         margin-top: 10px;
         font-size: 14px;
         color: #333;
+    }
+    @media (max-width:768px){
+        .main{
+            padding: 20px 15px;
+        }
+        .animation{
+            padding: 0 15px;
+        }
+        .animation .effect{
+            width: 100%;
+            float: none;
+            margin-right: 0;
+            border: none;
+            padding:0;
+            padding-bottom: 15px;
+        }
+        .animation .jscode{
+            width: 100% !important;
+            float: none;
+            margin-top: 10px;
+        }
+        .animation .csscode{
+            width: 100% !important;
+            float: none;
+            margin-top: 10px;
+            margin-left: 0 !important;
+        }
+        .animation .jscode pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .animation .csscode pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .animation .text p{
+            font-size: 13px;
+        }
+        .animation h4{
+            font-size: 14px;
+        }
+        .animation .effect h5{
+            font-size: 14px;
+        }
     }
 </style>

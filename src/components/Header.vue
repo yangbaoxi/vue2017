@@ -4,10 +4,13 @@
             <div class="logo">
                 <img src="../assets/logo.png" alt="">
             </div>
-            <div class="nav">
+            <div class="nav" :class="{active:navActive}">
                 <ul>
                     <li :class="{active:active == index}" v-for='(nav,index) in navLink' @click='linkPath(nav,index)'><router-link :to="nav.path">{{nav.name}}</router-link></li>
                 </ul>
+            </div>
+            <div class="enlarge" @click="navBtn">
+                <div class="icon" :class="{active:navBtnActive}"></div>
             </div>
         </header>
     </div>
@@ -46,11 +49,17 @@
                         name:"vuex"
                     }
                 ],
+                navBtnActive:false,
+                navActive:false
             }
         },
         methods:{
             linkPath(nav,index){
                 this.$store.commit('headerClick',index)
+            },
+            navBtn(){
+                this.navActive = !this.navActive;
+                this.navBtnActive = !this.navBtnActive;
             }
         },
         computed: {
@@ -72,7 +81,7 @@
         z-index: 99;     
     }
     header{
-        width: 1000px;
+        max-width: 1000px;
         margin:  0 auto;
     }
     header::before{
@@ -119,14 +128,95 @@
     .nav ul li a{
         padding: 0 20px;
         display: block;
-        color: #4D555D;
+        color: #34495e;
         text-align: center;
         font-size: 16px;
         line-height: 60px;
         font-weight: bold;
-        text-shadow:  0 0 6px rgb(123, 24, 216);
+        transition: all 0.35s;
     }
     .nav ul li.active a{
-        text-shadow:  0 0 6px rgb(230, 11, 84);
+        color: rgb(123, 24, 216);
+    }
+    .nav ul li a:hover{
+        color:rgb(123, 24, 216);
+    }
+    .enlarge{
+        position: relative;
+        float: right;
+        cursor: pointer;
+        z-index: 30;
+        height: 36px;
+        width: 36px;
+        right: 15px;
+        top: 24px;
+        border-radius: 2px;
+        display: none;
+    }
+    .enlarge .icon{
+        background-color: #2c3e50;
+        border-radius: 2px;
+        height: 3px;
+        position: absolute;
+        top: 18px;
+        transition-duration: 0.5s;
+        width: 83%;
+    }
+    .enlarge .icon::before{
+        top: -9px;
+    }
+    .enlarge .icon::after{
+        top: 9px;
+    }
+    .enlarge .icon::before, .enlarge .icon::after{
+        background-color: #2c3e50;
+        border-radius: 2px;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        transition-duration: 0.5s;
+        width: 36px;
+    }
+    .enlarge .icon.active {
+        width: 0;
+    }
+    .enlarge .icon.active::before{
+        transform: translateY(9px) rotate(45deg);
+    }
+    .enlarge .icon.active::after{
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    @media (max-width:768px){
+        .enlarge{
+            display: block;
+        }
+        .nav{
+            position: absolute;
+            float: none;
+            margin-left: 0;
+            padding: 5px 0;
+            background: #ffffff;
+            z-index: 99;
+            width:150px;
+            top: 73px;
+            left: -155px;
+            transition: all 0.5s;
+            box-shadow: 1px 1px 4px #7b18d8;
+            border-radius: 0 5px 5px 0;
+        }
+        .nav.active{
+            left:0;
+        }
+        .nav ul li {
+            float: none;
+        }
+        .nav ul li a{
+            font-size: 14px;
+            line-height: 40px;
+        }
+        .logo{
+            margin-left: 20px;
+        }
     }
 </style>

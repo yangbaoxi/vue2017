@@ -178,7 +178,7 @@
 
 <style scoped>
     .main{
-        width: 1000px;
+        max-width: 1000px;
         margin: 30px auto 0;
         padding: 20px 0;
     }
@@ -202,13 +202,13 @@
         color: #42b983;
     }
     .main li .shell{
-        width: 700px;
-        background: #4eb3b9;
+        max-width: 700px;
+        background: #f8f8f8;
         padding: 10px 20px;
         margin-top: 15px;
     }
     .main li .shell pre{
-        color: #fff;
+        color: #525252;
         display: block;
         padding: 5px 0;
         font-size: 13px;
@@ -216,26 +216,26 @@
     }
 
     .main li .code{
-        width: 700px;
-        background: #2b333b;
+        max-width: 700px;
+        background: #f8f8f8;
         padding: 10px 20px;
         margin-top: 15px;
     }
     .main li .code pre{
-        color: #fff;
+        color: #2973b7;
         display: block;
         padding: 6px 0;
         font-size: 13px;
         line-height: 20px;
     }
     .main li .jsCode{
-        width: 700px;
-        background: #ff0097;
+        max-width: 700px;
+        background: #f8f8f8;
         padding: 10px 20px;
         margin-top: 15px;
     }
     .main li .jsCode pre{
-        color: #fff;
+        color: #42b983;
         display: block;
         padding: 6px 0;
         font-size: 13px;
@@ -244,13 +244,13 @@
     .main li .on_Btn a{
         padding: 6px 20px;
         color: #fff;
-        background: #0000ff;
+        background: #8dc8da;
         display: inline-block;
         margin-top: 20px;
     }
 
     .bubble{
-        width: 100%;
+        max-width: 100%;
         margin-top: 20px;
         border: 2px solid purple;
         padding: 15px;
@@ -275,7 +275,7 @@
     }
     .bubble .parent a{
         position: absolute;
-        background: #0000ff;
+        background: #8dc8da;
         color: #fff;
         display: inline-block;
         padding: 5px;
@@ -303,5 +303,33 @@
     }
     .on_Btn .submit{
         margin-top: 20px;
+    }
+    @media (max-width:768px){
+        .main li h3{
+            font-size: 14px;
+        }
+        .main li .jsCode pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .main li .code pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .main li .shell pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .main{
+            margin: 0 auto 0;
+        }
+
+        .bubble h2{
+            font-size: 13px;
+        }
+
+        .bubble .parent{
+            width: 140px;
+        }
     }
 </style>

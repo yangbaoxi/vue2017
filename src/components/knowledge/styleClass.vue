@@ -100,8 +100,8 @@
 </script>
 
 <style scoped>
-.main{
-        width: 1000px;
+    .main{
+        max-width: 1000px;
         margin: 30px auto 0;
         padding: 20px 0;
     }
@@ -125,13 +125,13 @@
         color: #42b983;
     }
     .main li .shell{
-        width: 700px;
-        background: #4eb3b9;
+        max-width: 700px;
+        background: #f8f8f8;
         padding: 10px 20px;
         margin-top: 15px;
     }
     .main li .shell pre{
-        color: #fff;
+        color: #525252;
         display: block;
         padding: 5px 0;
         font-size: 13px;
@@ -139,26 +139,26 @@
     }
 
     .main li .code{
-        width: 700px;
-        background: #2b333b;
+        max-width: 700px;
+        background: #f8f8f8;
         padding: 10px 20px;
         margin-top: 15px;
     }
     .main li .code pre{
-        color: #fff;
+        color: #2973b7;
         display: block;
         padding: 6px 0;
         font-size: 13px;
         line-height: 20px;
     }
     .main li .jsCode{
-        width: 700px;
-        background: #ff0097;
+        max-width: 700px;
+        background: #f8f8f8;
         padding: 10px 20px;
         margin-top: 15px;
     }
     .main li .jsCode pre{
-        color: #fff;
+        color: #42b983;
         display: block;
         padding: 6px 0;
         font-size: 13px;
@@ -167,23 +167,48 @@
     .main li .on_Btn a{
         padding: 6px 20px;
         color: #fff;
-        background: #0000ff;
+        background: #8dc8da;
         display: inline-block;
         margin-top: 20px;
         margin-right: 10px;
     }
     .main li .on_Btn .tabBox{
         font-size: 16px;
-        color: #0000ff;
-        border: 1px solid black;
+        color: #000000;
+        border: 2px solid rgb(37, 17, 214);
         margin-top: 10px;
         padding: 20px;
         display: none;
+        font-weight: bold;
     }
     .main li .on_Btn .tabBox.active{
         display: block;
     }
     .active{
         color: black;
+    }
+
+    @media (max-width:768px){
+        .main li h3{
+            font-size: 14px;
+        }
+        .main{
+            margin:  0 auto;
+        }
+        .main li .shell pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .main li .code pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .main li .jsCode pre{
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .main li .on_Btn .tabBox{
+            font-size: 14px;
+        }
     }
 </style>

@@ -32,7 +32,7 @@
 </script>
 <style scoped>
     .main{
-        width: 1000px;
+        max-width: 1000px;
         margin: 70px auto 0;
         padding: 20px 0;
     }
@@ -57,5 +57,24 @@
     .main .children-router a.router-link-exact-active{
         color: #fff;
         background: #0099ff;
+    }
+    @media (max-width:768px){
+        .main{
+            padding: 15px;
+        }
+        .main h1{
+            font-size: 16px;
+        }
+        .main .children-router{
+            text-align-last: justify;
+            text-align: justify;
+        }
+        .main .children-router a{
+            padding: 8px 25px;
+            font-size: 12px;
+            border-radius: 5px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
     }
 </style>

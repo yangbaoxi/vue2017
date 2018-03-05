@@ -82,7 +82,7 @@
 </script>
 <style scoped>
     .main{
-        width: 1200px;
+        max-width: 1200px;
         margin: 70px auto 0;
         padding: 20px 0;
     }
@@ -99,7 +99,7 @@
         color: red;
     }
     .AllBox {
-        width: 1200px;
+        max-width: 1200px;
         height: 1000px;
         margin:  20px auto 0;
     }
@@ -134,11 +134,11 @@
     .AllBox ul li .box .box_left{
         width: 50%;
         float: left;
-        background: #2b333b;
+        background: #f8f8f8;
     }
     .AllBox ul li .box .box_left pre{
         font-size: 14px;
-        color: #fff;
+        color: #2973b7;
         line-height: 25px;
         padding: 15px;
     }
@@ -161,7 +161,7 @@
         padding: 15px;
     }
     .explain{
-        width: 100%;
+        max-width: 100%;
         margin-top: 20px;
         padding: 20px;
     }
@@ -179,7 +179,7 @@
     .demonstration a{
         padding: 8px 35px;
         display: inline-block;
-        background:purple;
+        background:#8dc8da;
         color: #fff;
         margin-top: 10px;
     }
@@ -188,5 +188,45 @@
         color: #2b333b;
         font-weight: bold;
         margin-bottom: 10px;
+    }
+    @media (max-width:768px){
+        .main{
+            padding: 20px 15px;
+        }
+        .main h1{
+            font-size: 18px;
+        }
+        .main p{
+            font-size: 14px;
+        }
+        .AllBox ul li .box .box_left{
+            float: none;
+            width: 100%;
+        }
+        .AllBox ul li h4{
+            font-size: 14px;
+        }
+        .AllBox ul li .box .box_left pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .AllBox ul li .box .box_right{
+            float: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .AllBox ul li .box .box_right pre{
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+
+        .demonstration{
+            border-color: #b6b6ec;
+        }
+
+        .explain p{
+            font-size: 13px;
+            color: #000;
+        }
     }
 </style>

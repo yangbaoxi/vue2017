@@ -45,7 +45,7 @@
     }
     span{
         font-size: 24px;
-        width: 1100px;
+        max-width: 1100px;
         display: block;
         margin: 40px auto;
 
